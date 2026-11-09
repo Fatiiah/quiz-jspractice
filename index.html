@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Basics Quiz</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="quiz">
+
+    <!-- Title block -->
+    <header>
+      <h1>Web Basics Quiz</h1>
+      <p>Choose one answer for each question, then press Submit.</p>
+      <p id="progress">Answered: 0 / 5</p>
+    </header>
+
+    <!-- Questions block -->
+    <form id="quiz-form">
+
+      <section class="question" id="q1">
+        <h2>1. What does HTML stand for?</h2>
+        <label><input type="radio" name="q1" value="a"> Hyper Text Markup Language</label>
+        <label><input type="radio" name="q1" value="b"> High Tech Modern Language</label>
+        <label><input type="radio" name="q1" value="c"> Home Tool Markup Language</label>
+      </section>
+
+      <section class="question" id="q2">
+        <h2>2. Which CSS property changes the color of text?</h2>
+        <label><input type="radio" name="q2" value="a"> font-style</label>
+        <label><input type="radio" name="q2" value="b"> color</label>
+        <label><input type="radio" name="q2" value="c"> background</label>
+      </section>
+
+      <section class="question" id="q3">
+        <h2>3. Which tag creates the biggest heading?</h2>
+        <label><input type="radio" name="q3" value="a"> &lt;h6&gt;</label>
+        <label><input type="radio" name="q3" value="b"> &lt;head&gt;</label>
+        <label><input type="radio" name="q3" value="c"> &lt;h1&gt;</label>
+      </section>
+
+      <section class="question" id="q4">
+        <h2>4. Which JavaScript data type holds true or false?</h2>
+        <label><input type="radio" name="q4" value="a"> string</label>
+        <label><input type="radio" name="q4" value="b"> boolean</label>
+        <label><input type="radio" name="q4" value="c"> array</label>
+      </section>
+
+      <section class="question" id="q5">
+        <h2>5. Which JavaScript function shows a popup message?</h2>
+        <label><input type="radio" name="q5" value="a"> alert()</label>
+        <label><input type="radio" name="q5" value="b"> print()</label>
+        <label><input type="radio" name="q5" value="c"> popup()</label>
+      </section>
+
+      <!-- Buttons block -->
+      <div class="buttons">
+        <button type="submit">Submit</button>
+        <button type="button" id="restart">Restart</button>
+      </div>
+
+    </form>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
