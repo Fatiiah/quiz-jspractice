@@ -1,0 +1,145 @@
+/* ---------- Colors ---------- */
+:root {
+  --accent: #6d4aff;
+  --accent-dark: #5436d6;
+  --text: #2b2b3a;
+  --muted: #6b6b7b;
+  --light: #f5f4fb;
+  --border: #e3e1f0;
+  --green: #1f9d55;
+  --red: #d64545;
+}
+
+/* ---------- Base ---------- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 2rem 1rem;
+  font-family: system-ui, sans-serif;
+  line-height: 1.5;
+  color: var(--text);
+  background: linear-gradient(135deg, #6d4aff, #b79cff);
+}
+
+/* ---------- Quiz card ---------- */
+.quiz {
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+h1 {
+  margin: 0 0 0.5rem;
+  color: var(--accent);
+}
+
+header p {
+  margin: 0.25rem 0;
+  color: var(--muted);
+}
+
+#progress {
+  font-weight: 600;
+  color: var(--accent);
+}
+
+/* ---------- Question blocks ---------- */
+.question {
+  margin-bottom: 1.25rem;
+  padding: 1.25rem;
+  background: var(--light);
+  border: 1px solid var(--border);
+  border-left: 6px solid var(--border);
+  border-radius: 12px;
+}
+
+.question h2 {
+  margin: 0 0 0.75rem;
+  font-size: 1.1rem;
+}
+
+/* ---------- Answer options ---------- */
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  padding: 0.6rem 0.9rem;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+label:hover {
+  border-color: var(--accent);
+}
+
+/* highlight the option that is selected */
+label:has(input:checked) {
+  background: #ece8ff;
+  border-color: var(--accent);
+  font-weight: 600;
+}
+
+input[type="radio"] {
+  margin-right: 0.5rem;
+  accent-color: var(--accent);
+}
+
+/* ---------- After submitting: right / wrong ---------- */
+.question.correct {
+  border-left-color: var(--green);
+}
+
+.question.wrong {
+  border-left-color: var(--red);
+}
+
+/* ---------- Buttons ---------- */
+.buttons {
+  display: flex;
+  gap: 0.75rem;
+}
+
+button {
+  flex: 1;
+  padding: 0.8rem 1rem;
+  border: none;
+  border-radius: 8px;
+  background: var(--accent);
+  color: white;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--accent-dark);
+}
+
+#restart {
+  background: var(--light);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+#restart:hover {
+  background: var(--border);
+}
+
+/* ---------- Small screens ---------- */
+@media (max-width: 500px) {
+  .quiz {
+    padding: 1.25rem;
+  }
+}
